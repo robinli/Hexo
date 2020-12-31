@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo 練習</title>
+  <title>RobinNotes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo 練習">
+<meta property="og:title" content="RobinNotes">
 <meta property="og:url" content="https://blog.robinks.net/index.html">
-<meta property="og:site_name" content="Hexo 練習">
+<meta property="og:site_name" content="RobinNotes">
 <meta property="og:locale">
-<meta property="article:author" content="Robin">
+<meta property="article:author" content="Robin 李瑞彬">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo 練習" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="RobinNotes" type="application/atom+xml">
   
   
     <link rel="shortcut icon" href="/favicon.png">
@@ -42,8 +42,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo 練習</a>
+        <a href="/" id="logo">RobinNotes</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Robin 個人筆記</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -73,8 +77,8 @@
   
     <article id="post-Creat-blog-by-Hexo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2020/12/24/Creat-blog-by-Hexo/" class="article-date">
-  <time class="dt-published" datetime="2020-12-24T01:57:46.000Z" itemprop="datePublished">2020-12-24</time>
+    <a href="/2020/12/31/Creat-blog-by-Hexo/" class="article-date">
+  <time class="dt-published" datetime="2020-12-31T14:30:00.000Z" itemprop="datePublished">2020-12-31</time>
 </a>
     
   </div>
@@ -85,7 +89,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/12/24/Creat-blog-by-Hexo/">Hexo 架設部落格</a>
+      <a class="p-name article-title" href="/2020/12/31/Creat-blog-by-Hexo/">Hexo 架設部落格</a>
     </h1>
   
 
@@ -93,9 +97,11 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>安裝與使用步驟</p>
-<p>檢查本機環境</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line"></span><br><span class="line">git version</span><br></pre></td></tr></table></figure>
+        <p>開站第一篇先介紹這個網站建置的方式，這是透過 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/index.html">Hexo</a> 產生靜態網頁，發行到 GitHub 網站上。</p>
+<p>Hexo 是一個產生靜態網頁工具程式，以 Makedown 語法撰寫文章內容，可以在本機端產生網頁與瀏覽，一鍵發行到 GitHub 上。</p>
+<p>目前會在 Evernote 撰寫文章，使用 VSCode 來調整 Makedown 語法與執行 Hexo 指令。</p>
+<h1 id="安裝與使用步驟"><a href="#安裝與使用步驟" class="headerlink" title="安裝與使用步驟"></a>安裝與使用步驟</h1><p>檢查本機環境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">git version</span><br></pre></td></tr></table></figure>
 <p>建議使用 Node.js 10.0 以上版本，git  2.2 以上版本</p>
 <p>安裝 hexo 命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
@@ -121,19 +127,20 @@
 <p>瀏覽新產生的頁面<br><a target="_blank" rel="noopener" href="http://localhost:4000/Page-Title">http://localhost:4000/Page-Title</a></p>
 <p>安裝 Git 部署套件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>部署到 Github</p>
+<p>部署到 Github<br>修改 _config.yml 發行的網址，取代下面最後一行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;your_name&#x2F;your_repo.git</span><br></pre></td></tr></table></figure>
+<p>執行部署</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>產生完成即部署網站</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
 <p>瀏覽 GitHub 的網站<br><a href="https://blog.robinks.net/">https://blog.robinks.net</a></p>
 <hr>
-<p>切換主題</p>
-<p>所有主題 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+<h1 id="切換主題"><a href="#切換主題" class="headerlink" title="切換主題"></a>切換主題</h1><p>所有主題 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
 <p>切換主題步驟<br><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=5ROIU_9dYe4&amp;feature=emb_logo">https://www.youtube.com/watch?v=5ROIU_9dYe4&amp;feature=emb_logo</a></p>
 <p>安裝到本機</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;huweihuang&#x2F;hexo-theme-huweihuang.git .&#x2F;hexo-huweihuang</span><br><span class="line">cd hexo-huweihuang</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 <hr>
-<p>線上教學<br>Hexo教程第一期 简介<br><a target="_blank" rel="noopener" href="https://youtu.be/PsXWbI2Mqu0">https://youtu.be/PsXWbI2Mqu0</a></p>
+<h1 id="線上教學"><a href="#線上教學" class="headerlink" title="線上教學"></a>線上教學</h1><p>Hexo教程第一期 简介<br><a target="_blank" rel="noopener" href="https://youtu.be/PsXWbI2Mqu0">https://youtu.be/PsXWbI2Mqu0</a></p>
 <p>Hexo教程第二期 安装与使用<br><a target="_blank" rel="noopener" href="https://youtu.be/xvIRGmKWpFM">https://youtu.be/xvIRGmKWpFM</a></p>
 <p>Hexo教程第三期 写作<br><a target="_blank" rel="noopener" href="https://youtu.be/HLJ9jJy7CMg">https://youtu.be/HLJ9jJy7CMg</a></p>
 <p>Hexo教程第四期 Front Matter<br><a target="_blank" rel="noopener" href="https://youtu.be/Rl48Yk4A_V8">https://youtu.be/Rl48Yk4A_V8</a></p>
@@ -141,158 +148,18 @@
 <p>Hexo教程第六期 命令<br><a target="_blank" rel="noopener" href="https://youtu.be/mgdXi5npArQ">https://youtu.be/mgdXi5npArQ</a></p>
 <p>Hexo教程第七期 部署<br><a target="_blank" rel="noopener" href="https://youtu.be/B0yVJ46CTR8">https://youtu.be/B0yVJ46CTR8</a></p>
 <hr>
-<p>Hexo 說明文件<br><a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/">https://hexo.io/zh-tw/docs/</a></p>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><p>Hexo 官方繁體說明文件<br><a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/index.html">https://hexo.io/zh-tw/docs/index.html</a></p>
+<hr>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.robinks.net/2020/12/24/Creat-blog-by-Hexo/" data-id="ckj275uqq0000pgk62s6m4dyd" data-title="Hexo 架設部落格" class="article-share-link">Teilen</a>
+      <a data-url="https://blog.robinks.net/2020/12/31/Creat-blog-by-Hexo/" data-id="ckjczz95k0001x0k6gl08gf3x" data-title="Hexo 架設部落格" class="article-share-link">Teilen</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo-%E7%B7%B4%E7%BF%92/" rel="tag">Hexo 練習</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo-%E6%9E%B6%E7%AB%99/" rel="tag">Hexo 架站</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-My-Post" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/12/23/My-Post/" class="article-date">
-  <time class="dt-published" datetime="2020-12-23T04:39:31.000Z" itemprop="datePublished">2020-12-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/12/23/My-Post/">My Post</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.robinks.net/2020/12/23/My-Post/" data-id="ckj1ccp6f0002tkk632ybbll8" data-title="My Post" class="article-share-link">Teilen</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Post-Title" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/12/23/Post-Title/" class="article-date">
-  <time class="dt-published" datetime="2020-12-23T04:04:54.000Z" itemprop="datePublished">2020-12-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/12/23/Post-Title/">部落格標題</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>內文 Hello <em>Kaohsiung</em></p>
-<h1 id="標題一"><a href="#標題一" class="headerlink" title="標題一"></a>標題一</h1><h2 id="標題二"><a href="#標題二" class="headerlink" title="標題二"></a>標題二</h2><h3 id="標題三"><a href="#標題三" class="headerlink" title="標題三"></a>標題三</h3><p><strong>這是加粗</strong> **</p>
-<p><em>這是斜體</em> *</p>
-<ul>
-<li>AAA</li>
-<li>BBB</li>
-</ul>
-<ol>
-<li>AAA</li>
-<li>BBB</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">這是程式碼</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>引用</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.robinks.net/2020/12/23/Post-Title/" data-id="ckj1ccp6h0003tkk696xv5eme" data-title="部落格標題" class="article-share-link">Teilen</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BookTag/" rel="tag">BookTag</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo-%E7%B7%B4%E7%BF%92/" rel="tag">Hexo 練習</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MyTag/" rel="tag">MyTag</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SampleTag/" rel="tag">SampleTag</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/12/23/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2020-12-23T03:43:35.656Z" itemprop="datePublished">2020-12-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/12/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.robinks.net/2020/12/23/hello-world/" data-id="ckj1ccp6i0004tkk6dh7vb8v5" data-title="Hello World" class="article-share-link">Teilen</a>
-      
-      
-      
     </footer>
   </div>
   
@@ -314,7 +181,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BookTag/" rel="tag">BookTag</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-%E7%B7%B4%E7%BF%92/" rel="tag">Hexo 練習</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MyTag/" rel="tag">MyTag</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SampleTag/" rel="tag">SampleTag</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-%E6%9E%B6%E7%AB%99/" rel="tag">Hexo 架站</a></li></ul>
     </div>
   </div>
 
@@ -324,7 +191,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/BookTag/" style="font-size: 10px;">BookTag</a> <a href="/tags/Hexo-%E7%B7%B4%E7%BF%92/" style="font-size: 20px;">Hexo 練習</a> <a href="/tags/MyTag/" style="font-size: 10px;">MyTag</a> <a href="/tags/SampleTag/" style="font-size: 10px;">SampleTag</a>
+      <a href="/tags/Hexo-%E6%9E%B6%E7%AB%99/" style="font-size: 10px;">Hexo 架站</a>
     </div>
   </div>
 
@@ -346,19 +213,7 @@
       <ul>
         
           <li>
-            <a href="/2020/12/24/Creat-blog-by-Hexo/">Hexo 架設部落格</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/23/My-Post/">My Post</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/23/Post-Title/">部落格標題</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/23/hello-world/">Hello World</a>
+            <a href="/2020/12/31/Creat-blog-by-Hexo/">Hexo 架設部落格</a>
           </li>
         
       </ul>
@@ -374,7 +229,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2020 Robin<br>
+      &copy; 2020 Robin 李瑞彬<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
